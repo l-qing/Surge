@@ -3,6 +3,7 @@
 
 [Rule]
 URL-REGEX,https?:\/\/.+.googlevideo.com\/ptracking\?pltype=adhost,REJECT
+URL-REGEX,https?:\/\/.+.googlevideo.com\/videoplayback\?expire.*,REJECT
 URL-REGEX,https?:\/\/.+.youtube.com\/api\/stats\/ads,REJECT
 URL-REGEX,https?:\/\/.+.youtube.com\/get_midroll_,REJECT
 URL-REGEX,https?:\/\/.+.youtube.com\/pagead\/,REJECT
