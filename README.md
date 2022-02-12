@@ -1,5 +1,4 @@
 # 收集一些`Surge`的规则及模板
 
-## 屏蔽`YouTube`广告
-[jimmyorz/Surge](https://github.com/jimmyorz/Surge)
+由于原规则 https://github.com/lhie1/Rules 被禁用了，只能自己导出一些只用的规则。
 
