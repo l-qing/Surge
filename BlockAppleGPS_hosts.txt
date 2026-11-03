@@ -1,0 +1,14 @@
+! Block Apple GPS Hosts
+! Title: Block Apple GPS Hosts
+! Version: 2025.0805.5
+! Homepage: https://github.com/jimmyorz
+! ----------------------------------------------------------------------
+! 服務白名單
+@@||gsp-ssl.ls.apple.com^
+@@||time.apple.com^
+! AOE Block
+||gs-loc.apple.com^
+||iphone-services.apple.com^
+||iphone-services.applle.com^
+||iphone-services.com^
+||apple.com^

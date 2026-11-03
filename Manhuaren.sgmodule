@@ -1,0 +1,37 @@
+#!name=Remove Manhuaren/Manhuashe ADs
+#!desc=阻擋漫畫人/漫畫社廣告 v20251111.03
+#!system=ios
+#!category=Adblock
+
+[Rule]
+# 安裝本模組後，建議移除漫畫人/漫畫社再重新安裝以到最佳阻擋效果（重新安裝後會有一小段時間無法觀看限制內容，等待1-2小時左右即可解除）
+URL-REGEX,^https?:\/\/(mangaapi|comicapi).(manhuaren|manhuashe).(com|net)\/.+\/public\/(getShelfActivity|getStartPageAds|getStartPageAds2|getRecommendedGame|getAditem|getAds|getMultiAds|getUpgradeInfo|getVendor|getUserLocation),REJECT
+URL-REGEX,^https?:\/\/(mangaapi|comicapi).(manhuaren|manhuashe).(com|net)\/.+\/(manga|comic)\/(getMangaPromotionActivity|getComicPromotionActivity),REJECT
+URL-REGEX,^https?:\/\/(mangaapi|comicapi).(manhuaren|manhuashe).(com|net)\/.+\/(ad|ads)\/,REJECT
+URL-REGEX,hkadsapi.(manhuaren|manhuashe).(com|net),REJECT
+URL-REGEX,adsapi.(manhuaren|manhuashe).(com|net),REJECT
+URL-REGEX,videoapi.(manhuaren|manhuashe).(com|net),REJECT
+URL-REGEX,bi.(manhuaren|manhuashe).(com|net),REJECT
+URL-REGEX,euadsapi.(manhuaren|manhuashe).(com|net),REJECT
+URL-REGEX,adlog.(manhuaren|manhuashe).(com|net),REJECT
+
+DOMAIN-SUFFIX,adsapi.manhuaren.net,REJECT
+DOMAIN-SUFFIX,adsapi.manhuaren.com,REJECT
+DOMAIN-SUFFIX,adsapi.manhuashe.net,REJECT
+DOMAIN-SUFFIX,adsapi.manhuashe.com,REJECT
+DOMAIN-SUFFIX,hkadsapi.manhuaren.net,REJECT
+DOMAIN-SUFFIX,hkadsapi.manhuaren.com,REJECT
+DOMAIN-SUFFIX,hkadsapi.manhuashe.net,REJECT
+DOMAIN-SUFFIX,hkadsapi.manhuashe.com,REJECT
+DOMAIN-SUFFIX,euadsapi.manhuaren.net,REJECT
+DOMAIN-SUFFIX,euadsapi.manhuaren.com,REJECT
+DOMAIN-SUFFIX,euadsapi.manhuashe.net,REJECT
+DOMAIN-SUFFIX,euadsapi.manhuashe.com,REJECT
+DOMAIN-SUFFIX,adlog.manhuaren.net,REJECT
+DOMAIN-SUFFIX,adlog.manhuaren.com,REJECT
+DOMAIN-SUFFIX,adlog.manhuashe.net,REJECT
+DOMAIN-SUFFIX,adlog.manhuashe.com,REJECT
+# 在 iOS26 下 QUIC 協議使用縮短寫法的優先度無法被正常阻擋，暫解。
+
+[MITM]
+hostname = %APPEND% mangaapi.manhuaren.com, mangaapi.manhuaren.net, comicapi.manhuashe.com
